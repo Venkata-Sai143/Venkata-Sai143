@@ -11,7 +11,7 @@
   />
 </p>
 </a>
-## 👋 About Me
+👋 About Me
 
 ### Data Analyst | Excel | SQL | Power BI | Python
 
