@@ -11,3 +11,16 @@
   />
 </p>
 </a>
+## 👋 About Me
+
+### Data Analyst | Excel | SQL | Power BI | Python
+
+I am transitioning to Data Analytics with 2.5 years of experience in
+warehouse operations, inventory, dispatch, and reporting.
+
+I am building practical skills in Excel, SQL, Power BI, Python, and
+data visualization to analyze data, identify meaningful insights, and
+support data-driven business decisions.
+
+I bring operational experience, problem-solving skills, and a
+continuous-learning mindset to the projects I work on.
