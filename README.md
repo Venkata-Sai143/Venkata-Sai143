@@ -55,3 +55,9 @@ logistics coordination, operational reporting, and my transition
 into Data Analytics.
 
 🔗 [View My Resume](./Venkata_Sai_Data_Analyst_Resume.docx)
+## 📫 Connect With Me
+
+- 📧 **Email:** sai458285@gmail.com
+- 💼 **LinkedIn:** [Venkata Sai](https://www.linkedin.com/in/venkatasai-dataanalyst/)
+- 🌐 **Portfolio:** [View My Portfolio](https://venkata-sai143.github.io/)
+- 💻 **GitHub:** [Venkata-Sai143](https://github.com/Venkata-Sai143)
