@@ -38,3 +38,13 @@ continuous-learning mindset to the projects I work on.
 ### 🔧 Tools & Workflow
 - **Git & GitHub:** Version Control and Project Management
 - **Microsoft Excel:** Reporting and Business Analysis
+- ## 💼 Professional Experience
+
+### Warehouse Operations | 2.7 Years
+
+- Managed dispatch and day-to-day warehouse operations.
+- Prepared and maintained operational reports using Excel.
+- Tracked dispatch activities to support timely operations.
+- Worked with WMS systems to maintain accurate operational data.
+- Coordinated with team members to complete daily tasks efficiently.
+- Developed strong problem-solving, reporting, and operational skills.
