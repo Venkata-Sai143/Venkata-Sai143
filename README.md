@@ -24,3 +24,17 @@ support data-driven business decisions.
 
 I bring operational experience, problem-solving skills, and a
 continuous-learning mindset to the projects I work on.
+## 🛠️ Technical Skills
+
+### 📊 Data Analysis
+- **Excel:** Data Cleaning, Data Analysis, Functions, Pivot Tables, Reporting
+- **SQL:** Data Querying, Filtering, Aggregation, Joins, Subqueries
+- **Python:** Data Cleaning, Analysis, and Visualization
+
+### 📈 Business Intelligence
+- **Power BI:** Data Modeling, DAX, Interactive Dashboards, Data Visualization
+- **Tableau:** Data Visualization and Dashboard Development
+
+### 🔧 Tools & Workflow
+- **Git & GitHub:** Version Control and Project Management
+- **Microsoft Excel:** Reporting and Business Analysis
