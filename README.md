@@ -48,3 +48,10 @@ continuous-learning mindset to the projects I work on.
 - Worked with WMS systems to maintain accurate operational data.
 - Coordinated with team members to complete daily tasks efficiently.
 - Developed strong problem-solving, reporting, and operational skills.
+- ## 📄 Resume
+
+My resume highlights my experience in warehouse operations,
+logistics coordination, operational reporting, and my transition
+into Data Analytics.
+
+🔗 [View My Resume](./Venkata_Sai_Data_Analyst_Resume.docx)
