@@ -1,4 +1,3 @@
-<p align="center"> <img src="https://raw.githubusercontent.com/Venkata-Sai143/Venkata-Sai143/main/assets/hero-live.svg" width="884" alt="Live animated header"/> </p>
 <a href="https://github.com/Venkata-Sai143/Venkata-Sai143">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Venkata-Sai143/Venkata-Sai143/main/dark.svg">
