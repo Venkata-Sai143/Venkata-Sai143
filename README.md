@@ -6,6 +6,12 @@
 </a>
 
 <p align="center">
+  <a href="https://venkata-sai143.github.io/Venkata-Sai143/">
+    <img src="./profile-preview.gif" width="100%" alt="Profile Preview — click to open live"/>
+  </a>
+</p>
+
+<p align="center">
 <a href="https://venkata-sai143.github.io/Venkata-Sai143/">
 <img src="https://img.shields.io/badge/✨_View_Live_Demo-ff2b7a?style=for-the-badge" alt="Live Demo"/>
 </a>
