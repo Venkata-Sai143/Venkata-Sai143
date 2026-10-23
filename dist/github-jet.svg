@@ -313,7 +313,6 @@
     keyTimes="0;0.5;1"
     values="35.00,140.00;478.00,140.00;35.00,140.00"/>
 </g>
-</svg>img[src*="github-jet.svg"],
-svg.github-jet {
+</svgimg[alt="GitHub Jet Heatmap"] {
   display: none !important;
 }
