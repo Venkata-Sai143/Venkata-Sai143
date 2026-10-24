@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://venkata-sai143.github.io/Venkata-Sai143/">
-    <img src="https://img.shields.io/badge/✨_View_Live_Demo-ff2b7a?style=for-the-badge" alt="Live Demo"/>
+    <img src="https://img.shields.io/badge/✨_View_Live-ff2b7a?style=for-the-badge" alt="Live Demo"/>
   </a>
 </p>
 
