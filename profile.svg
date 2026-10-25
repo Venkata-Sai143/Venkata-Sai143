@@ -327,15 +327,10 @@
 
   <!-- tags -->
   <rect x="52"  y="1243" width="64"  height="17" rx="2" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
-  <text x="84"  y="1255" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#c8c2d8">Power BI</text>
   <rect x="124" y="1243" width="38"  height="17" rx="2" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
-  <text x="143" y="1255" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#c8c2d8">DAX</text>
   <rect x="170" y="1243" width="84"  height="17" rx="2" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
-  <text x="212" y="1255" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#c8c2d8">Power Query</text>
   <rect x="262" y="1243" width="108" height="17" rx="2" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
-  <text x="316" y="1255" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#c8c2d8">Data Storytelling</text>
   <rect x="378" y="1243" width="64"  height="17" rx="2" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
-  <text x="410" y="1255" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#c8c2d8">Treemap</text>
 
   <!-- right: area chart -->
   <rect x="652" y="1096" width="208" height="176" rx="5" fill="rgba(0,0,0,.28)"/>
