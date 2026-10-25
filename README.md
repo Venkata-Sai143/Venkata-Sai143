@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://venkata-sai143.github.io/Venkata-Sai143/">
-    <img src="./profile.svg" width="100%" style="max-width:900px;" alt="Venkata Sai — Data Analyst Profile"/>
+    <img src="./profile.svg" width="100%" alt="Venkata Sai — Data Analyst Profile"/>
   </a>
 </p>
 
