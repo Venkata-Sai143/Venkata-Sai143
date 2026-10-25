@@ -144,7 +144,6 @@
 <g class="s2">
   <text x="24" y="124" font-family="Georgia,'Times New Roman',serif" font-size="72" font-weight="900" fill="#f2f0f8" letter-spacing="-2">Venkata</text>
   <text x="24" y="198" font-family="Georgia,'Times New Roman',serif" font-size="72" font-weight="900" fill="#f2f0f8" letter-spacing="-2">Sai<tspan fill="#e0357a">.</tspan></text>
-  <rect class="cursor" x="218" y="160" width="5" height="50" fill="#e0357a" rx="1"/>
 </g>
 
 <!-- tagline -->
