@@ -1,0 +1,602 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 2280" width="900" height="2280">
+<defs>
+  <style>
+    @keyframes fadeUp {
+      0%   { opacity:0; transform:translateY(18px); }
+      100% { opacity:1; transform:translateY(0); }
+    }
+    @keyframes blink {
+      0%,49%  { opacity:1; }
+      50%,100%{ opacity:0; }
+    }
+    @keyframes pulse {
+      0%,100% { r:4; opacity:0.5; }
+      50%      { r:6; opacity:1;   }
+    }
+    @keyframes glow {
+      0%,100% { opacity:0.7; }
+      50%      { opacity:1; }
+    }
+    @keyframes lineDrawHR {
+      0%   { stroke-dashoffset:300; opacity:0; }
+      10%  { opacity:1; }
+      100% { stroke-dashoffset:0; opacity:1; }
+    }
+    @keyframes lineDraw {
+      0%   { stroke-dashoffset:500; opacity:0; }
+      10%  { opacity:1; }
+      100% { stroke-dashoffset:0; opacity:1; }
+    }
+    @keyframes barW110 { 0%{width:0px} 100%{width:110px} }
+    @keyframes barW88  { 0%{width:0px} 100%{width:88px}  }
+    @keyframes barW72  { 0%{width:0px} 100%{width:72px}  }
+    @keyframes barW55  { 0%{width:0px} 100%{width:55px}  }
+
+    .s0  { animation: fadeUp .6s .05s ease both; }
+    .s1  { animation: fadeUp .6s .15s ease both; }
+    .s2  { animation: fadeUp .6s .3s  ease both; }
+    .s3  { animation: fadeUp .6s .45s ease both; }
+    .s4  { animation: fadeUp .6s .6s  ease both; }
+    .s5  { animation: fadeUp .6s .8s  ease both; }
+    .s6  { animation: fadeUp .6s 1.0s ease both; }
+    .s7  { animation: fadeUp .6s 1.2s ease both; }
+    .s8  { animation: fadeUp .6s 1.4s ease both; }
+    .s9  { animation: fadeUp .6s 1.6s ease both; }
+    .s10 { animation: fadeUp .6s 1.8s ease both; }
+    .s11 { animation: fadeUp .6s 2.0s ease both; }
+
+    .cursor { animation: blink 1s step-end infinite; }
+    .av-glow { animation: glow 2.5s ease-in-out infinite; }
+
+    .bar1 { animation: barW110 1.1s .9s  ease-out both; }
+    .bar2 { animation: barW88  1.1s 1.1s ease-out both; }
+    .bar3 { animation: barW72  1.1s 1.3s ease-out both; }
+    .bar4 { animation: barW55  1.1s 1.5s ease-out both; }
+    .sline { animation: lineDraw 1.8s .6s ease-out both; stroke-dasharray:500; stroke-dashoffset:500; }
+    .pdot  { animation: pulse 2s 2s ease-in-out infinite; }
+
+    /* ── HOVER HIGHLIGHTS ── */
+    /* Skill cards */
+    .sk-card { transition: filter .2s; cursor:default; }
+    .sk-card:hover rect:first-child { stroke: rgba(224,53,122,.7) !important; filter: drop-shadow(0 0 8px rgba(140,10,60,.5)); }
+    .sk-card:hover { filter: drop-shadow(0 0 10px rgba(140,10,60,.45)); }
+
+    /* Stats blocks */
+    .stat-g { transition: filter .2s; cursor:default; }
+    .stat-g:hover { filter: drop-shadow(0 0 6px rgba(224,53,122,.5)); }
+    .stat-g:hover text:first-child { fill: #ff4d95 !important; }
+
+    /* Project cards */
+    .proj-g { transition: filter .2s; cursor:default; }
+    .proj-g:hover { filter: drop-shadow(0 0 14px rgba(140,10,60,.55)); }
+    .proj-g:hover .proj-title-txt { fill: #ff4d95 !important; }
+
+    /* Experience rows */
+    .exp-row { transition: filter .2s; cursor:default; }
+    .exp-row:hover { filter: drop-shadow(0 0 6px rgba(224,53,122,.35)); }
+    .exp-row:hover .exp-role-txt { fill: #ff4d95 !important; }
+    .exp-row:hover rect { fill: rgba(224,53,122,.06) !important; }
+
+    /* Cert rows */
+    .cert-row { transition: filter .2s; cursor:default; }
+    .cert-row:hover { filter: drop-shadow(0 0 6px rgba(224,53,122,.35)); }
+    .cert-row:hover .cert-name-txt { fill: #ff4d95 !important; }
+    .cert-row:hover rect { fill: rgba(224,53,122,.06) !important; }
+
+    /* Chips / tags */
+    .chip-hi { transition: filter .15s; cursor:default; }
+    .chip-hi:hover { filter: brightness(1.3) drop-shadow(0 0 4px rgba(255,77,149,.6)); }
+    .chip-lo { transition: filter .15s; cursor:default; }
+    .chip-lo:hover { filter: brightness(1.2) drop-shadow(0 0 3px rgba(224,53,122,.4)); }
+
+    /* Contribution cells */
+    .cc { transition: transform .1s, filter .1s; cursor:default; transform-origin: center; }
+    .cc:hover { transform: scale(1.5); filter: brightness(1.5) drop-shadow(0 0 4px rgba(255,77,149,.8)); }
+
+    /* Links / buttons */
+    .hlink-btn { transition: filter .2s; cursor:pointer; }
+    .hlink-btn:hover { filter: brightness(1.25) drop-shadow(0 0 6px rgba(224,53,122,.7)); }
+
+    /* Section headings */
+    .sec-head-g { transition: filter .3s; }
+    .sec-head-g:hover text { fill: #ff4d95 !important; }
+  </style>
+
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%"   stop-color="#130413"/>
+    <stop offset="100%" stop-color="#0d030d"/>
+  </linearGradient>
+  <linearGradient id="avgrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#3a0820"/>
+    <stop offset="100%" stop-color="#6b1040"/>
+  </linearGradient>
+  <linearGradient id="accbar" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%"   stop-color="#8b0a3c"/>
+    <stop offset="50%"  stop-color="#e0357a"/>
+    <stop offset="100%" stop-color="#c050a0"/>
+  </linearGradient>
+  <linearGradient id="areag" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%"   stop-color="#e0357a" stop-opacity=".42"/>
+    <stop offset="100%" stop-color="#e0357a" stop-opacity=".02"/>
+  </linearGradient>
+</defs>
+
+<!-- BG -->
+<rect width="900" height="2280" fill="url(#bg)"/>
+<!-- hero glow blob -->
+<ellipse cx="740" cy="155" rx="260" ry="240" fill="rgba(140,10,60,.17)"/>
+
+<!-- ══════════ HERO ══════════ -->
+<g class="s0">
+  <!-- meta -->
+  <text x="24" y="52" font-family="'Courier New',monospace" font-size="9.5" fill="#e0357a" opacity=".65" letter-spacing="3">—— DATA ANALYTICS · BUSINESS INSIGHTS · ANDHRA PRADESH, INDIA</text>
+</g>
+
+<!-- avatar -->
+<g class="av-glow s1">
+  <circle cx="758" cy="118" r="74"  fill="url(#avgrad)" stroke="rgba(224,53,122,.42)" stroke-width="2"/>
+  <circle cx="758" cy="118" r="81"  fill="none" stroke="rgba(224,53,122,.14)" stroke-width="1"/>
+  <circle cx="758" cy="118" r="90"  fill="none" stroke="rgba(224,53,122,.07)" stroke-width="1"/>
+  <text x="758" y="134" text-anchor="middle" font-family="Georgia,serif" font-size="40" font-weight="900" fill="#ff4d95">VS</text>
+</g>
+
+<!-- name -->
+<g class="s2">
+  <text x="24" y="124" font-family="Georgia,'Times New Roman',serif" font-size="72" font-weight="900" fill="#f2f0f8" letter-spacing="-2">Venkata</text>
+  <text x="24" y="198" font-family="Georgia,'Times New Roman',serif" font-size="72" font-weight="900" fill="#f2f0f8" letter-spacing="-2">Sai<tspan fill="#e0357a">.</tspan></text>
+  <rect class="cursor" x="218" y="160" width="5" height="50" fill="#e0357a" rx="1"/>
+</g>
+
+<!-- tagline -->
+<g class="s3">
+  <text x="24" y="228" font-family="'Courier New',monospace" font-size="11" fill="#a09aaf" letter-spacing="3.5">DATA ANALYST  ·  EXCEL  ·  SQL  ·  POWER BI  ·  PYTHON</text>
+</g>
+
+<!-- subtitle -->
+<g class="s3">
+  <text x="24" y="258" font-family="Georgia,serif" font-size="13.5" fill="#c8c2d8" font-style="italic">Transforming raw data into clear, actionable insights — one dashboard at a time.</text>
+</g>
+
+<!-- details -->
+<g class="s4">
+  <text x="24" y="285" font-family="'Courier New',monospace" font-size="9.5" fill="rgba(160,154,175,.65)">🔭 Projects: HR Analytics · Corporate Sales Dashboard</text>
+  <text x="24" y="302" font-family="'Courier New',monospace" font-size="9.5" fill="rgba(160,154,175,.65)">🌱 Learning: SQL · Python · Tableau · Statistics    📍 Andhra Pradesh, India</text>
+</g>
+
+<!-- links -->
+<g class="s5">
+  <g class="hlink-btn"><rect x="24"  y="316" width="104" height="30" rx="4" fill="#e0357a"/><text x="76"  y="336" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" fill="#fff" letter-spacing="1">LINKEDIN</text></g>
+  <g class="hlink-btn"><rect x="136" y="316" width="74"  height="30" rx="4" fill="rgba(224,53,122,.15)" stroke="rgba(224,53,122,.35)" stroke-width="1"/><text x="173" y="336" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" fill="#f2f0f8" letter-spacing="1">EMAIL</text></g>
+  <g class="hlink-btn"><rect x="218" y="316" width="90"  height="30" rx="4" fill="rgba(224,53,122,.15)" stroke="rgba(224,53,122,.35)" stroke-width="1"/><text x="263" y="336" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" fill="#f2f0f8" letter-spacing="1">PORTFOLIO</text></g>
+  <g class="hlink-btn"><rect x="316" y="316" width="80"  height="30" rx="4" fill="rgba(224,53,122,.15)" stroke="rgba(224,53,122,.35)" stroke-width="1"/><text x="356" y="336" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" fill="#f2f0f8" letter-spacing="1">GITHUB</text></g>
+</g>
+
+<!-- divider -->
+<line x1="24" y1="360" x2="876" y2="360" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
+
+<!-- ══════════ STATS BAR ══════════ -->
+<g class="s5 stat-g">
+  <rect x="24" y="372" width="852" height="78" rx="8" fill="#1a0818" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
+  <line x1="194" y1="372" x2="194" y2="450" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
+  <line x1="364" y1="372" x2="364" y2="450" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
+  <line x1="534" y1="372" x2="534" y2="450" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
+  <line x1="706" y1="372" x2="706" y2="450" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
+
+  <text x="109" y="414" text-anchor="middle" font-family="Georgia,serif" font-size="31" font-weight="900" fill="#f2f0f8" letter-spacing="-1">213</text>
+  <text x="109" y="438" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#a09aaf" letter-spacing="2">TOTAL COMMITS</text>
+
+  <text x="279" y="414" text-anchor="middle" font-family="Georgia,serif" font-size="31" font-weight="900" fill="#ff4d95" letter-spacing="-1">0</text>
+  <text x="279" y="438" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#a09aaf" letter-spacing="2">STARS EARNED</text>
+
+  <text x="449" y="414" text-anchor="middle" font-family="Georgia,serif" font-size="31" font-weight="900" fill="#f2f0f8" letter-spacing="-1">4</text>
+  <text x="449" y="438" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#a09aaf" letter-spacing="2">PULL REQUESTS</text>
+
+  <text x="620" y="414" text-anchor="middle" font-family="Georgia,serif" font-size="31" font-weight="900" fill="#f2f0f8" letter-spacing="-1">0</text>
+  <text x="620" y="438" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#a09aaf" letter-spacing="2">DAY STREAK</text>
+
+  <text x="793" y="414" text-anchor="middle" font-family="Georgia,serif" font-size="31" font-weight="900" fill="#f2f0f8" letter-spacing="-1">4</text>
+  <text x="793" y="438" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#a09aaf" letter-spacing="2">REPOS</text>
+</g>
+
+<line x1="24" y1="464" x2="876" y2="464" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
+
+<!-- ══════════ SKILLS ══════════ -->
+<g class="s6">
+  <text x="24" y="496" font-family="'Courier New',monospace" font-size="9" fill="#e0357a" opacity=".65" letter-spacing="3">#1 · SKILLS &amp; TECHNOLOGIES</text>
+  <text x="24" y="530" font-family="Georgia,serif" font-size="38" font-weight="900" fill="#f2f0f8" letter-spacing="-1">The tools I <tspan fill="#ff4d95" font-style="italic">reach for.</tspan></text>
+
+  <!-- card 1 -->
+  <g class="sk-card"><rect x="24"  y="548" width="414" height="108" rx="8" fill="#1a0818" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
+  <text x="44"  y="572" font-family="'Courier New',monospace" font-size="8.5" fill="#a09aaf" letter-spacing="2">SPREADSHEETS &amp; REPORTING</text>
+  <!-- hi chips -->
+  <rect x="44"  y="581" width="156" height="21" rx="3" fill="rgba(224,53,122,.12)" stroke="rgba(224,53,122,.45)" stroke-width="1"/>
+  <text x="122" y="596" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#ff4d95">Advanced Microsoft Excel</text>
+  <rect x="208" y="581" width="156" height="21" rx="3" fill="rgba(224,53,122,.12)" stroke="rgba(224,53,122,.45)" stroke-width="1"/>
+  <text x="286" y="596" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#ff4d95">PivotTables &amp; Reporting</text>
+  <!-- normal chips -->
+  <rect x="44"  y="609" width="112" height="21" rx="3" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
+  <text x="100" y="624" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#c8c2d8">Google Sheets</text>
+  <rect x="164" y="609" width="170" height="21" rx="3" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
+  <text x="249" y="624" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#c8c2d8">Data Cleaning &amp; Preparation</text>
+  </g>
+
+  <!-- card 2 -->
+  <g class="sk-card"><rect x="462" y="548" width="414" height="108" rx="8" fill="#1a0818" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
+  <text x="482" y="572" font-family="'Courier New',monospace" font-size="8.5" fill="#a09aaf" letter-spacing="2">DATABASES &amp; QUERYING</text>
+  <rect x="482" y="581" width="58"  height="21" rx="3" fill="rgba(224,53,122,.12)" stroke="rgba(224,53,122,.45)" stroke-width="1"/>
+  <text x="511" y="596" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#ff4d95">MySQL</text>
+  <rect x="482" y="609" width="148" height="21" rx="3" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
+  <text x="556" y="624" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#c8c2d8">SQL Joins &amp; Aggregations</text>
+  <rect x="638" y="609" width="148" height="21" rx="3" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
+  <text x="712" y="624" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#c8c2d8">SQL Querying &amp; Analysis</text>
+  </g>
+
+  <!-- card 3 -->
+  <g class="sk-card"><rect x="24"  y="668" width="414" height="108" rx="8" fill="#1a0818" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
+  <text x="44"  y="692" font-family="'Courier New',monospace" font-size="8.5" fill="#a09aaf" letter-spacing="2">DATA VISUALIZATION</text>
+  <rect x="44"  y="701" width="130" height="21" rx="3" fill="rgba(224,53,122,.12)" stroke="rgba(224,53,122,.45)" stroke-width="1"/>
+  <text x="109" y="716" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#ff4d95">Microsoft Power BI</text>
+  <rect x="182" y="701" width="156" height="21" rx="3" fill="rgba(224,53,122,.12)" stroke="rgba(224,53,122,.45)" stroke-width="1"/>
+  <text x="260" y="716" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#ff4d95">Dashboards Development</text>
+  <rect x="44"  y="729" width="104" height="21" rx="3" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
+  <text x="96"  y="744" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#c8c2d8">Tableau Public</text>
+  <rect x="156" y="729" width="118" height="21" rx="3" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
+  <text x="215" y="744" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#c8c2d8">Data Storytelling</text>
+  </g>
+
+  <!-- card 4 -->
+  <g class="sk-card"><rect x="462" y="668" width="414" height="108" rx="8" fill="#1a0818" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
+  <text x="482" y="692" font-family="'Courier New',monospace" font-size="8.5" fill="#a09aaf" letter-spacing="2">PROGRAMMING &amp; STATISTICS</text>
+  <rect x="482" y="701" width="148" height="21" rx="3" fill="rgba(224,53,122,.12)" stroke="rgba(224,53,122,.45)" stroke-width="1"/>
+  <text x="556" y="716" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#ff4d95">Python for Data Analysis</text>
+  <rect x="482" y="729" width="120" height="21" rx="3" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
+  <text x="542" y="744" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#c8c2d8">Statistics Analysis</text>
+  <rect x="610" y="729" width="58"  height="21" rx="3" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
+  <text x="639" y="744" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#c8c2d8">GitHub</text>
+  <rect x="676" y="729" width="42"  height="21" rx="3" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
+  <text x="697" y="744" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#c8c2d8">Jira</text>
+  </g>
+</g>
+
+<line x1="24" y1="790" x2="876" y2="790" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
+
+<!-- ══════════ PROJECTS ══════════ -->
+<g class="s7">
+  <text x="24" y="822" font-family="'Courier New',monospace" font-size="9" fill="#e0357a" opacity=".65" letter-spacing="3">#2 · SELECTED WORK</text>
+  <text x="24" y="858" font-family="Georgia,serif" font-size="38" font-weight="900" fill="#f2f0f8" letter-spacing="-1">Dashboards, <tspan fill="#ff4d95" font-style="italic">not guesswork.</tspan></text>
+
+  <!-- ── Project Card 1: HR Analytics ── -->
+  <g class="proj-g"><rect x="24" y="876" width="852" height="196" rx="9" fill="#1a0818" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
+  <rect x="24" y="876" width="3"   height="196" rx="1.5" fill="url(#accbar)"/>
+
+  <text x="52" y="906"  font-family="'Courier New',monospace" font-size="9" fill="#e0357a" opacity=".65" letter-spacing="2">#1 · EXCEL · DATA ANALYSIS · 2025</text>
+  <text x="52" y="940"  font-family="Georgia,serif" font-size="33" font-weight="900" fill="#f2f0f8" letter-spacing="-1" class="proj-title-txt">HR Analytics</text>
+  <text x="52" y="975"  font-family="Georgia,serif" font-size="33" font-weight="900" fill="#f2f0f8" letter-spacing="-1" class="proj-title-txt">Dashboard</text>
+  <text x="52" y="1000" font-family="Georgia,serif" font-size="12.5" fill="#c8c2d8" font-style="italic">Turning 20,000 employee records into actionable workforce insights.</text>
+  <text x="52" y="1020" font-family="'Courier New',monospace" font-size="9" fill="rgba(160,154,175,.5)">Built · Excel · Pivot Tables · Power Query · KPI Cards · Slicers · Conditional Formatting</text>
+
+  <!-- pstats -->
+  <text x="52"  y="1052" font-family="Georgia,serif" font-size="26" font-weight="900" fill="#f2f0f8">20K</text>
+  <text x="52"  y="1068" font-family="'Courier New',monospace" font-size="7.5" fill="#a09aaf" letter-spacing="1">RECORDS ANALYZED</text>
+  <text x="170" y="1052" font-family="Georgia,serif" font-size="26" font-weight="900" fill="#f2f0f8">15+</text>
+  <text x="170" y="1068" font-family="'Courier New',monospace" font-size="7.5" fill="#a09aaf" letter-spacing="1">KPI CARDS</text>
+  <text x="268" y="1052" font-family="Georgia,serif" font-size="26" font-weight="900" fill="#f2f0f8">6</text>
+  <text x="268" y="1068" font-family="'Courier New',monospace" font-size="7.5" fill="#a09aaf" letter-spacing="1">DIMENSIONS</text>
+
+  <!-- tags -->
+  <rect x="52"  y="1032" width="0" height="0"/><!-- spacer -->
+
+  <!-- right preview -->
+  <rect x="652" y="886" width="208" height="176" rx="5" fill="rgba(0,0,0,.28)"/>
+  <text x="756" y="906" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#a09aaf" letter-spacing="1.5">HR DIMENSIONS</text>
+
+  <text x="664" y="928" font-family="'Courier New',monospace" font-size="7" fill="rgba(160,154,175,.5)" letter-spacing="1">SALARY</text>
+  <rect class="bar1" x="664" y="932" width="110" height="9" rx="2" fill="rgba(224,53,122,.5)"/>
+
+  <text x="664" y="955" font-family="'Courier New',monospace" font-size="7" fill="rgba(160,154,175,.5)" letter-spacing="1">ATTENDANCE</text>
+  <rect class="bar2" x="664" y="959" width="88"  height="9" rx="2" fill="rgba(180,30,80,.6)"/>
+
+  <text x="664" y="982" font-family="'Courier New',monospace" font-size="7" fill="rgba(160,154,175,.5)" letter-spacing="1">PERFORMANCE</text>
+  <rect class="bar3" x="664" y="986" width="72"  height="9" rx="2" fill="rgba(140,10,60,.7)"/>
+
+  <text x="664" y="1009" font-family="'Courier New',monospace" font-size="7" fill="rgba(160,154,175,.5)" letter-spacing="1">CITY</text>
+  <rect class="bar4" x="664" y="1013" width="55"  height="9" rx="2" fill="rgba(100,5,40,.8)"/>
+
+  <g class="hlink-btn"><rect x="664" y="1038" width="94" height="18" rx="3" fill="rgba(224,53,122,.12)" stroke="rgba(224,53,122,.35)" stroke-width="1"/><text x="711" y="1051" text-anchor="middle" font-family="'Courier New',monospace" font-size="8.5" fill="#ff4d95">⊞ REPOSITORY</text></g>
+  </g>
+</g>
+
+<!-- ── Project Card 2: Corporate Sales ── -->
+<g class="s8">
+  <g class="proj-g"><rect x="24" y="1086" width="852" height="196" rx="9" fill="#1a0818" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
+  <rect x="24" y="1086" width="3"   height="196" rx="1.5" fill="url(#accbar)"/>
+
+  <text x="52" y="1116" font-family="'Courier New',monospace" font-size="9" fill="#e0357a" opacity=".65" letter-spacing="2">#2 · POWER BI · DAX · 2025</text>
+  <text x="52" y="1150" font-family="Georgia,serif" font-size="33" font-weight="900" fill="#f2f0f8" letter-spacing="-1" class="proj-title-txt">Corporate Sales</text>
+  <text x="52" y="1185" font-family="Georgia,serif" font-size="33" font-weight="900" fill="#f2f0f8" letter-spacing="-1" class="proj-title-txt">Dashboard</text>
+  <text x="52" y="1210" font-family="Georgia,serif" font-size="12.5" fill="#c8c2d8" font-style="italic">₹872M across 9,000 orders — KPIs, treemap, regional splits and Business insights.</text>
+  <text x="52" y="1230" font-family="'Courier New',monospace" font-size="9" fill="rgba(160,154,175,.5)">Built · Power BI · DAX Measures · Power Query · 3-page report · Treemap · Regional Analysis</text>
+
+  <!-- pstats -->
+  <text x="52"  y="1262" font-family="Georgia,serif" font-size="26" font-weight="900" fill="#f2f0f8">₹872M</text>
+  <text x="52"  y="1278" font-family="'Courier New',monospace" font-size="7.5" fill="#a09aaf" letter-spacing="1">TOTAL SALES</text>
+  <text x="200" y="1262" font-family="Georgia,serif" font-size="26" font-weight="900" fill="#f2f0f8">9K</text>
+  <text x="200" y="1278" font-family="'Courier New',monospace" font-size="7.5" fill="#a09aaf" letter-spacing="1">ORDERS</text>
+  <text x="278" y="1262" font-family="Georgia,serif" font-size="26" font-weight="900" fill="#f2f0f8">10.9%</text>
+  <text x="278" y="1278" font-family="'Courier New',monospace" font-size="7.5" fill="#a09aaf" letter-spacing="1">PROFIT MARGIN</text>
+
+  <!-- tags -->
+  <rect x="52"  y="1243" width="64"  height="17" rx="2" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
+  <text x="84"  y="1255" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#c8c2d8">Power BI</text>
+  <rect x="124" y="1243" width="38"  height="17" rx="2" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
+  <text x="143" y="1255" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#c8c2d8">DAX</text>
+  <rect x="170" y="1243" width="84"  height="17" rx="2" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
+  <text x="212" y="1255" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#c8c2d8">Power Query</text>
+  <rect x="262" y="1243" width="108" height="17" rx="2" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
+  <text x="316" y="1255" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#c8c2d8">Data Storytelling</text>
+  <rect x="378" y="1243" width="64"  height="17" rx="2" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
+  <text x="410" y="1255" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#c8c2d8">Treemap</text>
+
+  <!-- right: area chart -->
+  <rect x="652" y="1096" width="208" height="176" rx="5" fill="rgba(0,0,0,.28)"/>
+  <text x="756" y="1116" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#a09aaf" letter-spacing="1.5">SALES TREND 2022–2025</text>
+
+  <text x="660" y="1240" font-family="'Courier New',monospace" font-size="7" fill="rgba(160,154,175,.45)">2022</text>
+  <text x="700" y="1240" font-family="'Courier New',monospace" font-size="7" fill="rgba(160,154,175,.45)">2023</text>
+  <text x="740" y="1240" font-family="'Courier New',monospace" font-size="7" fill="rgba(160,154,175,.45)">2024</text>
+  <text x="782" y="1240" font-family="'Courier New',monospace" font-size="7" fill="rgba(160,154,175,.45)">2025</text>
+
+  <defs>
+    <linearGradient id="ag2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#e0357a" stop-opacity=".42"/>
+      <stop offset="100%" stop-color="#e0357a" stop-opacity=".02"/>
+    </linearGradient>
+  </defs>
+  <path d="M664,1215 C682,1210 693,1188 714,1178 C734,1168 754,1158 774,1164 C789,1170 798,1196 802,1208 L802,1232 L664,1232 Z" fill="url(#ag2)"/>
+  <path class="sline" d="M664,1215 C682,1210 693,1188 714,1178 C734,1168 754,1158 774,1164 C789,1170 798,1196 802,1208" fill="none" stroke="#e0357a" stroke-width="2.5" stroke-linecap="round"/>
+  <circle class="pdot" cx="774" cy="1164" r="4" fill="#ff4d95"/>
+  <text x="762" y="1156" font-family="'Courier New',monospace" font-size="7" fill="rgba(255,77,149,.85)">₹253M</text>
+
+  <g class="hlink-btn"><rect x="664" y="1248" width="94" height="18" rx="3" fill="rgba(224,53,122,.12)" stroke="rgba(224,53,122,.35)" stroke-width="1"/><text x="711" y="1261" text-anchor="middle" font-family="'Courier New',monospace" font-size="8.5" fill="#ff4d95">⊞ REPOSITORY</text></g>
+  </g>
+</g>
+
+<line x1="24" y1="1296" x2="876" y2="1296" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
+
+<!-- ══════════ CONTRIBUTION GRID ══════════ -->
+<g class="s8">
+  <text x="24" y="1328" font-family="'Courier New',monospace" font-size="9" fill="#e0357a" opacity=".65" letter-spacing="3">#3 · COMMIT LOG</text>
+  <text x="24" y="1362" font-family="Georgia,serif" font-size="38" font-weight="900" fill="#f2f0f8" letter-spacing="-1">A year of <tspan fill="#ff4d95" font-style="italic">building.</tspan></text>
+
+  <rect x="24" y="1378" width="852" height="134" rx="8" fill="#1a0818" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
+  <text x="44" y="1402" font-family="'Courier New',monospace" font-size="8.5" fill="#a09aaf" letter-spacing="2">COMMIT LOG · GITHUB ACTIVITY</text>
+  <text x="44" y="1420" font-family="Georgia,serif" font-size="13" fill="#a09aaf" font-style="italic">A year of building, one square at a time.</text>
+
+  <!-- 52-col × 7-row grid, cell=11px, gap=2px, total width=52*13-2=674 -->
+  <!-- Base layer: full empty rows -->
+  <g transform="translate(44,1430)">
+    <rect x="0"   y="0"  width="674" height="9" rx="1" class="cc" fill="rgba(255,255,255,.04)"/>
+    <rect x="0"   y="11" width="674" height="9" rx="1" class="cc" fill="rgba(255,255,255,.04)"/>
+    <rect x="0"   y="22" width="674" height="9" rx="1" class="cc" fill="rgba(255,255,255,.04)"/>
+    <rect x="0"   y="33" width="674" height="9" rx="1" class="cc" fill="rgba(255,255,255,.04)"/>
+    <rect x="0"   y="44" width="674" height="9" rx="1" class="cc" fill="rgba(255,255,255,.04)"/>
+    <rect x="0"   y="55" width="674" height="9" rx="1" class="cc" fill="rgba(255,255,255,.04)"/>
+    <rect x="0"   y="66" width="674" height="9" rx="1" class="cc" fill="rgba(255,255,255,.04)"/>
+
+    <!-- Active cells from the exact levels array in the HTML:
+         [0,0,0,1,0,0,2,0,1,3,0,2,4,3,0,0,1,0,2,0,3,0,0,4,3,2,0,1,0,0,2,0,1,0,3,4,2,0,1,0,3,2,0,0,4,1,0,2,0,3,0,4,1,0,2,0,0,3,0,1,4,2,0,0,1,3,0,2,4,0,1,0,2,0,3,4,1,0,3,2,4,1,0,0,2,0,1,3,0,2,4,0,3,1,0,2,0,4,1,3,2,0,0,4,1,0,3,0,2,4,1,0,3,0,2,4,0,1,3,2,4,1,0,3,2,0,4,1,3,0,2,0,4,1,3,2,0,4,1,3,2,0,4,1,3,0,2,4,1,3]
+         Grid is col-major: col c, row r → idx = c*7+r
+         cell x = c*13, cell y = r*11 -->
+    <!-- l1=rgba(140,10,60,.45) l2=rgba(180,20,80,.65) l3=rgba(224,53,122,.75) l4=rgba(255,77,149,.9) -->
+
+    <!-- col 0: levels[0..6]=0,0,0,1,0,0,2 -->
+    <rect x="0"   y="33" width="11" height="9" rx="1" fill="rgba(140,10,60,.45)"/>
+    <rect x="0"   y="66" width="11" height="9" rx="1" fill="rgba(180,20,80,.65)"/>
+    <!-- col 1: 0,1,3,0,2,4,3 -->
+    <rect x="13"  y="11" width="11" height="9" rx="1" fill="rgba(140,10,60,.45)"/>
+    <rect x="13"  y="22" width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <rect x="13"  y="44" width="11" height="9" rx="1" fill="rgba(180,20,80,.65)"/>
+    <rect x="13"  y="55" width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect x="13"  y="66" width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <!-- col 2: 0,1,0,2,0,3,0 -->
+    <rect x="26"  y="11" width="11" height="9" rx="1" fill="rgba(140,10,60,.45)"/>
+    <rect x="26"  y="33" width="11" height="9" rx="1" fill="rgba(180,20,80,.65)"/>
+    <rect x="26"  y="55" width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <!-- col 3: 0,4,3,2,0,1,0 -->
+    <rect x="39"  y="11" width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect x="39"  y="22" width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <rect x="39"  y="33" width="11" height="9" rx="1" fill="rgba(180,20,80,.65)"/>
+    <rect x="39"  y="55" width="11" height="9" rx="1" fill="rgba(140,10,60,.45)"/>
+    <!-- col 4: 0,0,2,0,1,0,0 -->
+    <rect x="52"  y="22" width="11" height="9" rx="1" fill="rgba(180,20,80,.65)"/>
+    <rect x="52"  y="44" width="11" height="9" rx="1" fill="rgba(140,10,60,.45)"/>
+    <!-- col 5: 2,0,1,0,3,4,2 -->
+    <rect x="65"  y="0"  width="11" height="9" rx="1" fill="rgba(180,20,80,.65)"/>
+    <rect x="65"  y="22" width="11" height="9" rx="1" fill="rgba(140,10,60,.45)"/>
+    <rect x="65"  y="44" width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <rect x="65"  y="55" width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect x="65"  y="66" width="11" height="9" rx="1" fill="rgba(180,20,80,.65)"/>
+    <!-- col 6: 0,1,0,3,2,0,0 -->
+    <rect x="78"  y="11" width="11" height="9" rx="1" fill="rgba(140,10,60,.45)"/>
+    <rect x="78"  y="33" width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <rect x="78"  y="44" width="11" height="9" rx="1" fill="rgba(180,20,80,.65)"/>
+    <!-- col 7: 4,1,0,3,0,2,4 -->
+    <rect x="91"  y="0"  width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect x="91"  y="11" width="11" height="9" rx="1" fill="rgba(140,10,60,.45)"/>
+    <rect x="91"  y="33" width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <rect x="91"  y="55" width="11" height="9" rx="1" fill="rgba(180,20,80,.65)"/>
+    <rect x="91"  y="66" width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <!-- col 8: 1,0,2,0,0,3,0 -->
+    <rect x="104" y="0"  width="11" height="9" rx="1" fill="rgba(140,10,60,.45)"/>
+    <rect class="cc" x="104" y="22" width="11" height="9" rx="1" fill="rgba(180,20,80,.65)"/>
+    <rect class="cc" x="104" y="55" width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <!-- col 9: 4,2,0,0,4,1,3 -->
+    <rect x="117" y="0"  width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect class="cc" x="117" y="11" width="11" height="9" rx="1" fill="rgba(180,20,80,.65)"/>
+    <rect class="cc" x="117" y="44" width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect class="cc" x="117" y="55" width="11" height="9" rx="1" fill="rgba(140,10,60,.45)"/>
+    <rect class="cc" x="117" y="66" width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <!-- cols 10-20 (representative active pattern) -->
+    <rect x="130" y="0"  width="11" height="9" rx="1" fill="rgba(180,20,80,.65)"/>
+    <rect class="cc" x="130" y="33" width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <rect class="cc" x="143" y="22" width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect class="cc" x="143" y="55" width="11" height="9" rx="1" fill="rgba(140,10,60,.45)"/>
+    <rect x="156" y="0"  width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <rect class="cc" x="156" y="44" width="11" height="9" rx="1" fill="rgba(180,20,80,.65)"/>
+    <rect class="cc" x="169" y="11" width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect class="cc" x="169" y="66" width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <rect class="cc" x="182" y="33" width="11" height="9" rx="1" fill="rgba(140,10,60,.45)"/>
+    <rect class="cc" x="195" y="22" width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect class="cc" x="195" y="55" width="11" height="9" rx="1" fill="rgba(180,20,80,.65)"/>
+    <rect x="208" y="0"  width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <rect class="cc" x="208" y="44" width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <!-- cols 21-35 -->
+    <rect class="cc" x="221" y="11" width="11" height="9" rx="1" fill="rgba(140,10,60,.45)"/>
+    <rect class="cc" x="221" y="33" width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <rect x="234" y="0"  width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect class="cc" x="234" y="55" width="11" height="9" rx="1" fill="rgba(180,20,80,.65)"/>
+    <rect class="cc" x="247" y="22" width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <rect class="cc" x="247" y="66" width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect class="cc" x="260" y="11" width="11" height="9" rx="1" fill="rgba(140,10,60,.45)"/>
+    <rect class="cc" x="260" y="44" width="11" height="9" rx="1" fill="rgba(180,20,80,.65)"/>
+    <rect x="273" y="0"  width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect class="cc" x="273" y="33" width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <rect class="cc" x="286" y="22" width="11" height="9" rx="1" fill="rgba(140,10,60,.45)"/>
+    <rect class="cc" x="286" y="55" width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect class="cc" x="299" y="11" width="11" height="9" rx="1" fill="rgba(180,20,80,.65)"/>
+    <rect class="cc" x="312" y="44" width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <rect x="312" y="0"  width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <!-- cols 36-52 (recent activity, denser) -->
+    <rect x="325" y="0"  width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect class="cc" x="325" y="22" width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <rect class="cc" x="325" y="44" width="11" height="9" rx="1" fill="rgba(180,20,80,.65)"/>
+    <rect class="cc" x="338" y="11" width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect class="cc" x="338" y="33" width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <rect class="cc" x="338" y="55" width="11" height="9" rx="1" fill="rgba(140,10,60,.45)"/>
+    <rect x="351" y="0"  width="11" height="9" rx="1" fill="rgba(180,20,80,.65)"/>
+    <rect class="cc" x="351" y="22" width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect class="cc" x="351" y="44" width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <rect class="cc" x="351" y="66" width="11" height="9" rx="1" fill="rgba(140,10,60,.45)"/>
+    <rect class="cc" x="364" y="11" width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect class="cc" x="364" y="33" width="11" height="9" rx="1" fill="rgba(180,20,80,.65)"/>
+    <rect class="cc" x="364" y="55" width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <rect x="377" y="0"  width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect class="cc" x="377" y="22" width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <rect class="cc" x="377" y="44" width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect class="cc" x="377" y="66" width="11" height="9" rx="1" fill="rgba(140,10,60,.45)"/>
+    <rect class="cc" x="390" y="11" width="11" height="9" rx="1" fill="rgba(180,20,80,.65)"/>
+    <rect class="cc" x="390" y="33" width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect class="cc" x="390" y="55" width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <rect x="403" y="0"  width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect class="cc" x="403" y="22" width="11" height="9" rx="1" fill="rgba(180,20,80,.65)"/>
+    <rect class="cc" x="403" y="44" width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect class="cc" x="416" y="11" width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <rect class="cc" x="416" y="33" width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect class="cc" x="416" y="55" width="11" height="9" rx="1" fill="rgba(180,20,80,.65)"/>
+    <rect x="429" y="0"  width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect class="cc" x="429" y="22" width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <rect class="cc" x="429" y="44" width="11" height="9" rx="1" fill="rgba(180,20,80,.65)"/>
+    <rect class="cc" x="429" y="66" width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect class="cc" x="442" y="11" width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <rect class="cc" x="442" y="33" width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect x="455" y="0"  width="11" height="9" rx="1" fill="rgba(180,20,80,.65)"/>
+    <rect class="cc" x="455" y="22" width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect class="cc" x="455" y="55" width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <rect class="cc" x="468" y="11" width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect class="cc" x="468" y="44" width="11" height="9" rx="1" fill="rgba(180,20,80,.65)"/>
+    <rect x="481" y="0"  width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+    <rect class="cc" x="481" y="33" width="11" height="9" rx="1" fill="rgba(224,53,122,.75)"/>
+    <rect class="cc" x="494" y="22" width="11" height="9" rx="1" fill="rgba(180,20,80,.65)"/>
+    <rect class="cc" x="494" y="55" width="11" height="9" rx="1" fill="rgba(255,77,149,.9)"/>
+  </g>
+
+  <!-- legend -->
+  <text x="44"  y="1498" font-family="'Courier New',monospace" font-size="8.5" fill="#a09aaf">Less</text>
+  <rect x="80"  y="1486" width="11" height="11" rx="2" class="cc" fill="rgba(255,255,255,.04)"/>
+  <rect x="94"  y="1486" width="11" height="11" rx="2" fill="rgba(140,10,60,.45)"/>
+  <rect x="108" y="1486" width="11" height="11" rx="2" fill="rgba(180,20,80,.65)"/>
+  <rect x="122" y="1486" width="11" height="11" rx="2" fill="rgba(224,53,122,.75)"/>
+  <rect x="136" y="1486" width="11" height="11" rx="2" fill="rgba(255,77,149,.9)"/>
+  <text x="152" y="1498" font-family="'Courier New',monospace" font-size="8.5" fill="#a09aaf">More</text>
+</g>
+
+<line x1="24" y1="1518" x2="876" y2="1518" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
+
+<!-- ══════════ EXPERIENCE ══════════ -->
+<g class="s9">
+  <text x="24" y="1550" font-family="'Courier New',monospace" font-size="9" fill="#e0357a" opacity=".65" letter-spacing="3">#4 · WORK HISTORY</text>
+  <text x="24" y="1584" font-family="Georgia,serif" font-size="38" font-weight="900" fill="#f2f0f8" letter-spacing="-1">Where I've <tspan fill="#ff4d95" font-style="italic">been.</tspan></text>
+
+  <!-- row 1 -->
+  <g class="exp-row"><rect x="0" y="1598" width="900" height="59" fill="transparent"/><line x1="24" y1="1598" x2="876" y2="1598" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+  <text x="24"  y="1624" font-family="'Courier New',monospace" font-size="9.5" fill="rgba(160,154,175,.55)" letter-spacing=".3">Aug 2026 – Present</text>
+  <text x="230" y="1621" font-family="'Segoe UI',sans-serif" font-size="15" font-weight="600" fill="#f2f0f8" class="exp-role-txt">Data Analyst Training</text>
+  <text x="230" y="1641" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#a09aaf" font-style="italic">Structured training with instructor guidance · WhiteScholars Academy</text>
+
+  </g>
+  <!-- row 2 -->
+  <g class="exp-row"><rect x="0" y="1657" width="900" height="59" fill="transparent"/><line x1="24" y1="1657" x2="876" y2="1657" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+  <text x="24"  y="1683" font-family="'Courier New',monospace" font-size="9.5" fill="rgba(160,154,175,.55)" letter-spacing=".3">Dec 2025 – Apr 2026</text>
+  <text x="230" y="1680" font-family="'Segoe UI',sans-serif" font-size="15" font-weight="600" fill="#f2f0f8" class="exp-role-txt">Supervisor - Operations &amp; Dispatch</text>
+  <text x="230" y="1700" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#a09aaf" font-style="italic">Mahindra Logistics Limited (Zepto operations)</text>
+
+  </g>
+  <!-- row 3 -->
+  <g class="exp-row"><rect x="0" y="1716" width="900" height="56" fill="transparent"/><line x1="24" y1="1716" x2="876" y2="1716" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+  <text x="24"  y="1742" font-family="'Courier New',monospace" font-size="9.5" fill="rgba(160,154,175,.55)" letter-spacing=".3">Aug 2023 – Sep 2025</text>
+  <text x="230" y="1739" font-family="'Segoe UI',sans-serif" font-size="15" font-weight="600" fill="#f2f0f8" class="exp-role-txt">System Operator - WMS &amp; Logistics</text>
+  <text x="230" y="1759" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#a09aaf" font-style="italic">Ratnadeep Retail Pvt Ltd</text>
+  <line x1="24" y1="1772" x2="876" y2="1772" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+  </g>
+</g>
+
+<line x1="24" y1="1790" x2="876" y2="1790" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
+
+<!-- ══════════ CERTIFICATES ══════════ -->
+<g class="s10">
+  <text x="24" y="1822" font-family="'Courier New',monospace" font-size="9" fill="#e0357a" opacity=".65" letter-spacing="3">#5 · CREDENTIALS</text>
+  <text x="24" y="1856" font-family="Georgia,serif" font-size="38" font-weight="900" fill="#f2f0f8" letter-spacing="-1">Certified, <tspan fill="#ff4d95" font-style="italic">verified.</tspan></text>
+
+  <!-- cert 1 -->
+  <g class="cert-row"><rect x="0" y="1870" width="900" height="62" fill="transparent"/><line x1="24" y1="1870" x2="876" y2="1870" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+  <text x="24"  y="1898" font-family="'Segoe UI',sans-serif" font-size="15" font-weight="600" fill="#f2f0f8" class="cert-name-txt">Excel with AI Workshop</text>
+  <text x="24"  y="1918" font-family="'Courier New',monospace" font-size="9.5" fill="#a09aaf">OfficeMaster</text>
+  <text x="852" y="1898" text-anchor="end" font-family="'Courier New',monospace" font-size="9.5" fill="rgba(160,154,175,.55)">November 9, 2025</text>
+
+  </g>
+  <!-- cert 2 -->
+  <g class="cert-row"><rect x="0" y="1932" width="900" height="62" fill="transparent"/><line x1="24" y1="1932" x2="876" y2="1932" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+  <text x="24"  y="1960" font-family="'Segoe UI',sans-serif" font-size="15" font-weight="600" fill="#f2f0f8" class="cert-name-txt">PowerBI Workshop</text>
+  <text x="24"  y="1980" font-family="'Courier New',monospace" font-size="9.5" fill="#a09aaf">OfficeMaster</text>
+  <text x="852" y="1960" text-anchor="end" font-family="'Courier New',monospace" font-size="9.5" fill="rgba(160,154,175,.55)">September 7, 2025</text>
+  <line x1="24" y1="1994" x2="876" y2="1994" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+  </g>
+</g>
+
+<line x1="24" y1="2012" x2="876" y2="2012" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
+
+<!-- ══════════ FOOTER / CONNECT ══════════ -->
+<g class="s11">
+  <text x="24" y="2044" font-family="'Courier New',monospace" font-size="9" fill="#e0357a" opacity=".65" letter-spacing="3">#6 · CONNECT</text>
+  <text x="450" y="2090" text-anchor="middle" font-family="Georgia,serif" font-size="30" font-weight="900" fill="#f2f0f8">Let's build something <tspan fill="#ff4d95" font-style="italic">worth explaining.</tspan></text>
+  <text x="450" y="2116" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="13" fill="#a09aaf" font-style="italic">Data Analysis &amp; Reporting · Excel, SQL, Power BI, Python</text>
+
+  <!-- footer links -->
+  <g class="hlink-btn"><rect x="90"  y="2132" width="196" height="30" rx="4" fill="#e0357a"/><text x="188" y="2152" text-anchor="middle" font-family="'Courier New',monospace" font-size="9.5" fill="#fff" letter-spacing=".5">✉ EMAIL · sai458285@gmail.com</text></g>
+
+  <g class="hlink-btn"><rect x="296" y="2132" width="196" height="30" rx="4" fill="rgba(224,53,122,.15)" stroke="rgba(224,53,122,.35)" stroke-width="1"/>
+  <text x="394" y="2152" text-anchor="middle" font-family="'Courier New',monospace" font-size="9.5" fill="#f2f0f8" letter-spacing=".5">LINKEDIN</text></g>
+
+  <g class="hlink-btn"><rect x="502" y="2132" width="196" height="30" rx="4" fill="rgba(224,53,122,.15)" stroke="rgba(224,53,122,.35)" stroke-width="1"/>
+  <text x="600" y="2152" text-anchor="middle" font-family="'Courier New',monospace" font-size="9.5" fill="#f2f0f8" letter-spacing=".5">PORTFOLIO</text></g>
+
+  <!-- open to work badge -->
+  <g class="hlink-btn"><rect x="310" y="2176" width="280" height="28" rx="4" fill="rgba(224,53,122,.1)" stroke="rgba(224,53,122,.3)" stroke-width="1"/><text x="450" y="2195" text-anchor="middle" font-family="'Courier New',monospace" font-size="9.5" fill="#ff4d95" letter-spacing="1">✦  OPEN TO WORK · DATA ANALYST ROLES</text></g>
+
+  <text x="450" y="2234" text-anchor="middle" font-family="'Courier New',monospace" font-size="8.5" fill="rgba(160,154,175,.35)" letter-spacing=".5">Built by Venkata Sai — turning data into actionable business insights.</text>
+
+  <!-- bottom accent line -->
+  <line x1="200" y1="2252" x2="700" y2="2252" stroke="rgba(224,53,122,.18)" stroke-width="1"/>
+</g>
+
+</svg>
