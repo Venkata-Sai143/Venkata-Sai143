@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 2280" width="900" height="2280">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 2280" width="100%" style="max-width:900px;display:block;">
 <defs>
   <style>
     @keyframes fadeUp {
@@ -57,50 +57,53 @@
 
     /* ── HOVER HIGHLIGHTS ── */
     /* Skill cards */
-    .sk-card { transition: filter .2s; cursor:default; }
-    .sk-card:hover rect:first-child { stroke: rgba(224,53,122,.7) !important; filter: drop-shadow(0 0 8px rgba(140,10,60,.5)); }
-    .sk-card:hover { filter: drop-shadow(0 0 10px rgba(140,10,60,.45)); }
+    .sk-card { transition: filter .2s, opacity .2s; cursor:default; }
+    .sk-card:hover { filter: drop-shadow(0 0 12px rgba(224,53,122,.6)); }
+    .sk-card:hover text { fill: #ff4d95 !important; }
 
     /* Stats blocks */
     .stat-g { transition: filter .2s; cursor:default; }
-    .stat-g:hover { filter: drop-shadow(0 0 6px rgba(224,53,122,.5)); }
-    .stat-g:hover text:first-child { fill: #ff4d95 !important; }
+    .stat-g:hover { filter: drop-shadow(0 0 8px rgba(224,53,122,.55)); }
+    .stat-g:hover text { fill: #ff4d95 !important; }
 
     /* Project cards */
     .proj-g { transition: filter .2s; cursor:default; }
-    .proj-g:hover { filter: drop-shadow(0 0 14px rgba(140,10,60,.55)); }
-    .proj-g:hover .proj-title-txt { fill: #ff4d95 !important; }
+    .proj-g:hover { filter: drop-shadow(0 0 16px rgba(140,10,60,.6)); }
+    .proj-g:hover text { fill: #ff4d95 !important; }
 
     /* Experience rows */
     .exp-row { transition: filter .2s; cursor:default; }
-    .exp-row:hover { filter: drop-shadow(0 0 6px rgba(224,53,122,.35)); }
-    .exp-row:hover .exp-role-txt { fill: #ff4d95 !important; }
-    .exp-row:hover rect { fill: rgba(224,53,122,.06) !important; }
+    .exp-row:hover { filter: drop-shadow(0 0 8px rgba(224,53,122,.4)); }
+    .exp-row:hover text { fill: #ff4d95 !important; }
+    .exp-row:hover rect { fill: rgba(224,53,122,.07) !important; }
 
     /* Cert rows */
     .cert-row { transition: filter .2s; cursor:default; }
-    .cert-row:hover { filter: drop-shadow(0 0 6px rgba(224,53,122,.35)); }
-    .cert-row:hover .cert-name-txt { fill: #ff4d95 !important; }
-    .cert-row:hover rect { fill: rgba(224,53,122,.06) !important; }
+    .cert-row:hover { filter: drop-shadow(0 0 8px rgba(224,53,122,.4)); }
+    .cert-row:hover text { fill: #ff4d95 !important; }
+    .cert-row:hover rect { fill: rgba(224,53,122,.07) !important; }
 
     /* Chips / tags */
     .chip-hi { transition: filter .15s; cursor:default; }
-    .chip-hi:hover { filter: brightness(1.3) drop-shadow(0 0 4px rgba(255,77,149,.6)); }
+    .chip-hi:hover { filter: brightness(1.4) drop-shadow(0 0 5px rgba(255,77,149,.7)); }
+    .chip-hi:hover text { fill: #ff4d95 !important; }
     .chip-lo { transition: filter .15s; cursor:default; }
-    .chip-lo:hover { filter: brightness(1.2) drop-shadow(0 0 3px rgba(224,53,122,.4)); }
+    .chip-lo:hover { filter: brightness(1.3) drop-shadow(0 0 4px rgba(224,53,122,.5)); }
+    .chip-lo:hover text { fill: #ff4d95 !important; }
 
     /* Contribution cells */
     .cc { transition: transform .1s, filter .1s; cursor:default; transform-origin: center; }
-    .cc:hover { transform: scale(1.5); filter: brightness(1.5) drop-shadow(0 0 4px rgba(255,77,149,.8)); }
+    .cc:hover { transform: scale(1.6); filter: brightness(1.8) drop-shadow(0 0 5px rgba(255,77,149,.9)); }
 
     /* Links / buttons */
     .hlink-btn { transition: filter .2s; cursor:pointer; }
-    .hlink-btn:hover { filter: brightness(1.25) drop-shadow(0 0 6px rgba(224,53,122,.7)); }
+    .hlink-btn:hover { filter: brightness(1.3) drop-shadow(0 0 8px rgba(224,53,122,.8)); }
+    .hlink-btn:hover text { fill: #ffffff !important; }
 
     /* Section headings */
-    .sec-head-g { transition: filter .3s; }
+    .sec-head-g { transition: filter .3s; cursor:default; }
     .sec-head-g:hover text { fill: #ff4d95 !important; }
-  </style>
+</style>
 
   <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
     <stop offset="0%"   stop-color="#130413"/>
@@ -132,70 +135,69 @@
   <text x="24" y="52" font-family="'Courier New',monospace" font-size="9.5" fill="#e0357a" opacity=".65" letter-spacing="3">—— DATA ANALYTICS · BUSINESS INSIGHTS · ANDHRA PRADESH, INDIA</text>
 </g>
 
-<!-- avatar -->
+<!-- avatar — top right, smaller, not overlapping name -->
 <g class="av-glow s1">
-  <circle cx="758" cy="118" r="74"  fill="url(#avgrad)" stroke="rgba(224,53,122,.42)" stroke-width="2"/>
-  <circle cx="758" cy="118" r="81"  fill="none" stroke="rgba(224,53,122,.14)" stroke-width="1"/>
-  <circle cx="758" cy="118" r="90"  fill="none" stroke="rgba(224,53,122,.07)" stroke-width="1"/>
-  <text x="758" y="134" text-anchor="middle" font-family="Georgia,serif" font-size="40" font-weight="900" fill="#ff4d95">VS</text>
+  <circle cx="820" cy="72" r="56"  fill="url(#avgrad)" stroke="rgba(224,53,122,.42)" stroke-width="2"/>
+  <circle cx="820" cy="72" r="62"  fill="none" stroke="rgba(224,53,122,.14)" stroke-width="1"/>
+  <circle cx="820" cy="72" r="70"  fill="none" stroke="rgba(224,53,122,.07)" stroke-width="1"/>
+  <text x="820" y="88" text-anchor="middle" font-family="Georgia,serif" font-size="30" font-weight="900" fill="#ff4d95">VS</text>
 </g>
 
 <!-- name -->
 <g class="s2">
-  <text x="24" y="124" font-family="Georgia,'Times New Roman',serif" font-size="72" font-weight="900" fill="#f2f0f8" letter-spacing="-2">Venkata</text>
-  <text x="24" y="198" font-family="Georgia,'Times New Roman',serif" font-size="72" font-weight="900" fill="#f2f0f8" letter-spacing="-2">Sai<tspan fill="#e0357a">.</tspan></text>
-  <rect class="cursor" x="218" y="160" width="5" height="50" fill="#e0357a" rx="1"/>
+  <text x="24" y="110" font-family="Georgia,'Times New Roman',serif" font-size="68" font-weight="900" fill="#f2f0f8" letter-spacing="-2">Venkata</text>
+  <text x="24" y="180" font-family="Georgia,'Times New Roman',serif" font-size="68" font-weight="900" fill="#f2f0f8" letter-spacing="-2">Sai<tspan fill="#e0357a">.</tspan></text>
 </g>
 
 <!-- tagline -->
 <g class="s3">
-  <text x="24" y="228" font-family="'Courier New',monospace" font-size="11" fill="#a09aaf" letter-spacing="3.5">DATA ANALYST  ·  EXCEL  ·  SQL  ·  POWER BI  ·  PYTHON</text>
+  <text x="24" y="212" font-family="'Courier New',monospace" font-size="10.5" fill="#a09aaf" letter-spacing="3">DATA ANALYST  ·  EXCEL  ·  SQL  ·  POWER BI  ·  PYTHON</text>
 </g>
 
 <!-- subtitle -->
 <g class="s3">
-  <text x="24" y="258" font-family="Georgia,serif" font-size="13.5" fill="#c8c2d8" font-style="italic">Transforming raw data into clear, actionable insights — one dashboard at a time.</text>
+  <text x="24" y="240" font-family="Georgia,serif" font-size="13" fill="#c8c2d8" font-style="italic">Transforming raw data into clear, actionable insights — one dashboard at a time.</text>
 </g>
 
 <!-- details -->
 <g class="s4">
-  <text x="24" y="285" font-family="'Courier New',monospace" font-size="9.5" fill="rgba(160,154,175,.65)">🔭 Projects: HR Analytics · Corporate Sales Dashboard</text>
-  <text x="24" y="302" font-family="'Courier New',monospace" font-size="9.5" fill="rgba(160,154,175,.65)">🌱 Learning: SQL · Python · Tableau · Statistics    📍 Andhra Pradesh, India</text>
+  <text x="24" y="266" font-family="'Courier New',monospace" font-size="9.5" fill="rgba(160,154,175,.65)">🔭 Projects: HR Analytics · Corporate Sales Dashboard</text>
+  <text x="24" y="283" font-family="'Courier New',monospace" font-size="9.5" fill="rgba(160,154,175,.65)">🌱 Learning: SQL · Python · Tableau · Statistics    📍 Andhra Pradesh, India</text>
 </g>
 
 <!-- links -->
 <g class="s5">
-  <g class="hlink-btn"><rect x="24"  y="316" width="104" height="30" rx="4" fill="#e0357a"/><text x="76"  y="336" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" fill="#fff" letter-spacing="1">LINKEDIN</text></g>
-  <g class="hlink-btn"><rect x="136" y="316" width="74"  height="30" rx="4" fill="rgba(224,53,122,.15)" stroke="rgba(224,53,122,.35)" stroke-width="1"/><text x="173" y="336" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" fill="#f2f0f8" letter-spacing="1">EMAIL</text></g>
-  <g class="hlink-btn"><rect x="218" y="316" width="90"  height="30" rx="4" fill="rgba(224,53,122,.15)" stroke="rgba(224,53,122,.35)" stroke-width="1"/><text x="263" y="336" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" fill="#f2f0f8" letter-spacing="1">PORTFOLIO</text></g>
-  <g class="hlink-btn"><rect x="316" y="316" width="80"  height="30" rx="4" fill="rgba(224,53,122,.15)" stroke="rgba(224,53,122,.35)" stroke-width="1"/><text x="356" y="336" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" fill="#f2f0f8" letter-spacing="1">GITHUB</text></g>
+  <g class="hlink-btn"><rect x="24"  y="298" width="104" height="30" rx="4" fill="#e0357a"/><text x="76"  y="318" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" letter-spacing="1" fill="#fff">LINKEDIN</text></g>
+  <g class="hlink-btn"><rect x="136" y="298" width="74"  height="30" rx="4" fill="rgba(224,53,122,.15)" stroke="rgba(224,53,122,.35)" stroke-width="1"/><text x="173" y="318" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" letter-spacing="1" fill="#f2f0f8">EMAIL</text></g>
+  <g class="hlink-btn"><rect x="218" y="298" width="90"  height="30" rx="4" fill="rgba(224,53,122,.15)" stroke="rgba(224,53,122,.35)" stroke-width="1"/><text x="263" y="318" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" letter-spacing="1" fill="#f2f0f8">PORTFOLIO</text></g>
+  <g class="hlink-btn"><rect x="316" y="298" width="80"  height="30" rx="4" fill="rgba(224,53,122,.15)" stroke="rgba(224,53,122,.35)" stroke-width="1"/><text x="356" y="318" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" letter-spacing="1" fill="#f2f0f8">GITHUB</text></g>
 </g>
 
 <!-- divider -->
-<line x1="24" y1="360" x2="876" y2="360" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
+<line x1="24" y1="342" x2="876" y2="342" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
 
 <!-- ══════════ STATS BAR ══════════ -->
 <g class="s5 stat-g">
-  <rect x="24" y="372" width="852" height="78" rx="8" fill="#1a0818" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
-  <line x1="194" y1="372" x2="194" y2="450" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
-  <line x1="364" y1="372" x2="364" y2="450" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
-  <line x1="534" y1="372" x2="534" y2="450" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
-  <line x1="706" y1="372" x2="706" y2="450" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
+  <rect x="24" y="354" width="852" height="78" rx="8" fill="#1a0818" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
+  <line x1="194" y1="354" x2="194" y2="432" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
+  <line x1="364" y1="354" x2="364" y2="432" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
+  <line x1="534" y1="354" x2="534" y2="432" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
+  <line x1="706" y1="354" x2="706" y2="432" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
 
-  <text x="109" y="414" text-anchor="middle" font-family="Georgia,serif" font-size="31" font-weight="900" fill="#f2f0f8" letter-spacing="-1">213</text>
-  <text x="109" y="438" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#a09aaf" letter-spacing="2">TOTAL COMMITS</text>
+  <text x="109" y="396" text-anchor="middle" font-family="Georgia,serif" font-size="31" font-weight="900" fill="#f2f0f8" letter-spacing="-1">213</text>
+  <text x="109" y="420" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#a09aaf" letter-spacing="2">TOTAL COMMITS</text>
 
-  <text x="279" y="414" text-anchor="middle" font-family="Georgia,serif" font-size="31" font-weight="900" fill="#ff4d95" letter-spacing="-1">0</text>
-  <text x="279" y="438" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#a09aaf" letter-spacing="2">STARS EARNED</text>
+  <text x="279" y="396" text-anchor="middle" font-family="Georgia,serif" font-size="31" font-weight="900" fill="#ff4d95" letter-spacing="-1">0</text>
+  <text x="279" y="420" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#a09aaf" letter-spacing="2">STARS EARNED</text>
 
-  <text x="449" y="414" text-anchor="middle" font-family="Georgia,serif" font-size="31" font-weight="900" fill="#f2f0f8" letter-spacing="-1">4</text>
-  <text x="449" y="438" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#a09aaf" letter-spacing="2">PULL REQUESTS</text>
+  <text x="449" y="396" text-anchor="middle" font-family="Georgia,serif" font-size="31" font-weight="900" fill="#f2f0f8" letter-spacing="-1">4</text>
+  <text x="449" y="420" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#a09aaf" letter-spacing="2">PULL REQUESTS</text>
 
-  <text x="620" y="414" text-anchor="middle" font-family="Georgia,serif" font-size="31" font-weight="900" fill="#f2f0f8" letter-spacing="-1">0</text>
-  <text x="620" y="438" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#a09aaf" letter-spacing="2">DAY STREAK</text>
+  <text x="620" y="396" text-anchor="middle" font-family="Georgia,serif" font-size="31" font-weight="900" fill="#f2f0f8" letter-spacing="-1">0</text>
+  <text x="620" y="420" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#a09aaf" letter-spacing="2">DAY STREAK</text>
 
-  <text x="793" y="414" text-anchor="middle" font-family="Georgia,serif" font-size="31" font-weight="900" fill="#f2f0f8" letter-spacing="-1">4</text>
-  <text x="793" y="438" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#a09aaf" letter-spacing="2">REPOS</text>
+  <text x="793" y="396" text-anchor="middle" font-family="Georgia,serif" font-size="31" font-weight="900" fill="#f2f0f8" letter-spacing="-1">4</text>
+  <text x="793" y="420" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#a09aaf" letter-spacing="2">REPOS</text>
 </g>
 
 <line x1="24" y1="464" x2="876" y2="464" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
@@ -207,7 +209,7 @@
 
   <!-- card 1 -->
   <g class="sk-card"><rect x="24"  y="548" width="414" height="108" rx="8" fill="#1a0818" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
-  <text x="44"  y="572" font-family="'Courier New',monospace" font-size="8.5" fill="#a09aaf" letter-spacing="2">SPREADSHEETS &amp; REPORTING</text>
+  <text x="44"  y="572" font-family="'Courier New',monospace" font-size="8.5" letter-spacing="2" fill="#a09aaf">SPREADSHEETS &amp; REPORTING</text>
   <!-- hi chips -->
   <rect x="44"  y="581" width="156" height="21" rx="3" fill="rgba(224,53,122,.12)" stroke="rgba(224,53,122,.45)" stroke-width="1"/>
   <text x="122" y="596" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#ff4d95">Advanced Microsoft Excel</text>
@@ -222,7 +224,7 @@
 
   <!-- card 2 -->
   <g class="sk-card"><rect x="462" y="548" width="414" height="108" rx="8" fill="#1a0818" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
-  <text x="482" y="572" font-family="'Courier New',monospace" font-size="8.5" fill="#a09aaf" letter-spacing="2">DATABASES &amp; QUERYING</text>
+  <text x="482" y="572" font-family="'Courier New',monospace" font-size="8.5" letter-spacing="2" fill="#a09aaf">DATABASES &amp; QUERYING</text>
   <rect x="482" y="581" width="58"  height="21" rx="3" fill="rgba(224,53,122,.12)" stroke="rgba(224,53,122,.45)" stroke-width="1"/>
   <text x="511" y="596" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#ff4d95">MySQL</text>
   <rect x="482" y="609" width="148" height="21" rx="3" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
@@ -233,7 +235,7 @@
 
   <!-- card 3 -->
   <g class="sk-card"><rect x="24"  y="668" width="414" height="108" rx="8" fill="#1a0818" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
-  <text x="44"  y="692" font-family="'Courier New',monospace" font-size="8.5" fill="#a09aaf" letter-spacing="2">DATA VISUALIZATION</text>
+  <text x="44"  y="692" font-family="'Courier New',monospace" font-size="8.5" letter-spacing="2" fill="#a09aaf">DATA VISUALIZATION</text>
   <rect x="44"  y="701" width="130" height="21" rx="3" fill="rgba(224,53,122,.12)" stroke="rgba(224,53,122,.45)" stroke-width="1"/>
   <text x="109" y="716" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#ff4d95">Microsoft Power BI</text>
   <rect x="182" y="701" width="156" height="21" rx="3" fill="rgba(224,53,122,.12)" stroke="rgba(224,53,122,.45)" stroke-width="1"/>
@@ -246,7 +248,7 @@
 
   <!-- card 4 -->
   <g class="sk-card"><rect x="462" y="668" width="414" height="108" rx="8" fill="#1a0818" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
-  <text x="482" y="692" font-family="'Courier New',monospace" font-size="8.5" fill="#a09aaf" letter-spacing="2">PROGRAMMING &amp; STATISTICS</text>
+  <text x="482" y="692" font-family="'Courier New',monospace" font-size="8.5" letter-spacing="2" fill="#a09aaf">PROGRAMMING &amp; STATISTICS</text>
   <rect x="482" y="701" width="148" height="21" rx="3" fill="rgba(224,53,122,.12)" stroke="rgba(224,53,122,.45)" stroke-width="1"/>
   <text x="556" y="716" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#ff4d95">Python for Data Analysis</text>
   <rect x="482" y="729" width="120" height="21" rx="3" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
@@ -269,37 +271,37 @@
   <g class="proj-g"><rect x="24" y="876" width="852" height="196" rx="9" fill="#1a0818" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
   <rect x="24" y="876" width="3"   height="196" rx="1.5" fill="url(#accbar)"/>
 
-  <text x="52" y="906"  font-family="'Courier New',monospace" font-size="9" fill="#e0357a" opacity=".65" letter-spacing="2">#1 · EXCEL · DATA ANALYSIS · 2025</text>
-  <text x="52" y="940"  font-family="Georgia,serif" font-size="33" font-weight="900" fill="#f2f0f8" letter-spacing="-1" class="proj-title-txt">HR Analytics</text>
-  <text x="52" y="975"  font-family="Georgia,serif" font-size="33" font-weight="900" fill="#f2f0f8" letter-spacing="-1" class="proj-title-txt">Dashboard</text>
-  <text x="52" y="1000" font-family="Georgia,serif" font-size="12.5" fill="#c8c2d8" font-style="italic">Turning 20,000 employee records into actionable workforce insights.</text>
+  <text x="52" y="906"  font-family="'Courier New',monospace" font-size="9" opacity=".65" letter-spacing="2" fill="#e0357a">#1 · EXCEL · DATA ANALYSIS · 2025</text>
+  <text x="52" y="940"  font-family="Georgia,serif" font-size="33" font-weight="900" letter-spacing="-1" class="proj-title-txt" fill="#f2f0f8">HR Analytics</text>
+  <text x="52" y="975"  font-family="Georgia,serif" font-size="33" font-weight="900" letter-spacing="-1" class="proj-title-txt" fill="#f2f0f8">Dashboard</text>
+  <text x="52" y="1000" font-family="Georgia,serif" font-size="12.5" font-style="italic;fill:#c8c2d8">Turning 20,000 employee records into actionable workforce insights.</text>
   <text x="52" y="1020" font-family="'Courier New',monospace" font-size="9" fill="rgba(160,154,175,.5)">Built · Excel · Pivot Tables · Power Query · KPI Cards · Slicers · Conditional Formatting</text>
 
   <!-- pstats -->
   <text x="52"  y="1052" font-family="Georgia,serif" font-size="26" font-weight="900" fill="#f2f0f8">20K</text>
-  <text x="52"  y="1068" font-family="'Courier New',monospace" font-size="7.5" fill="#a09aaf" letter-spacing="1">RECORDS ANALYZED</text>
+  <text x="52"  y="1068" font-family="'Courier New',monospace" font-size="7.5" letter-spacing="1" fill="#a09aaf">RECORDS ANALYZED</text>
   <text x="170" y="1052" font-family="Georgia,serif" font-size="26" font-weight="900" fill="#f2f0f8">15+</text>
-  <text x="170" y="1068" font-family="'Courier New',monospace" font-size="7.5" fill="#a09aaf" letter-spacing="1">KPI CARDS</text>
+  <text x="170" y="1068" font-family="'Courier New',monospace" font-size="7.5" letter-spacing="1" fill="#a09aaf">KPI CARDS</text>
   <text x="268" y="1052" font-family="Georgia,serif" font-size="26" font-weight="900" fill="#f2f0f8">6</text>
-  <text x="268" y="1068" font-family="'Courier New',monospace" font-size="7.5" fill="#a09aaf" letter-spacing="1">DIMENSIONS</text>
+  <text x="268" y="1068" font-family="'Courier New',monospace" font-size="7.5" letter-spacing="1" fill="#a09aaf">DIMENSIONS</text>
 
   <!-- tags -->
   <rect x="52"  y="1032" width="0" height="0"/><!-- spacer -->
 
   <!-- right preview -->
   <rect x="652" y="886" width="208" height="176" rx="5" fill="rgba(0,0,0,.28)"/>
-  <text x="756" y="906" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#a09aaf" letter-spacing="1.5">HR DIMENSIONS</text>
+  <text x="756" y="906" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" letter-spacing="1.5" fill="#a09aaf">HR DIMENSIONS</text>
 
-  <text x="664" y="928" font-family="'Courier New',monospace" font-size="7" fill="rgba(160,154,175,.5)" letter-spacing="1">SALARY</text>
+  <text x="664" y="928" font-family="'Courier New',monospace" font-size="7" letter-spacing="1" fill="rgba(160,154,175,.5)">SALARY</text>
   <rect class="bar1" x="664" y="932" width="110" height="9" rx="2" fill="rgba(224,53,122,.5)"/>
 
-  <text x="664" y="955" font-family="'Courier New',monospace" font-size="7" fill="rgba(160,154,175,.5)" letter-spacing="1">ATTENDANCE</text>
+  <text x="664" y="955" font-family="'Courier New',monospace" font-size="7" letter-spacing="1" fill="rgba(160,154,175,.5)">ATTENDANCE</text>
   <rect class="bar2" x="664" y="959" width="88"  height="9" rx="2" fill="rgba(180,30,80,.6)"/>
 
-  <text x="664" y="982" font-family="'Courier New',monospace" font-size="7" fill="rgba(160,154,175,.5)" letter-spacing="1">PERFORMANCE</text>
+  <text x="664" y="982" font-family="'Courier New',monospace" font-size="7" letter-spacing="1" fill="rgba(160,154,175,.5)">PERFORMANCE</text>
   <rect class="bar3" x="664" y="986" width="72"  height="9" rx="2" fill="rgba(140,10,60,.7)"/>
 
-  <text x="664" y="1009" font-family="'Courier New',monospace" font-size="7" fill="rgba(160,154,175,.5)" letter-spacing="1">CITY</text>
+  <text x="664" y="1009" font-family="'Courier New',monospace" font-size="7" letter-spacing="1" fill="rgba(160,154,175,.5)">CITY</text>
   <rect class="bar4" x="664" y="1013" width="55"  height="9" rx="2" fill="rgba(100,5,40,.8)"/>
 
   <g class="hlink-btn"><rect x="664" y="1038" width="94" height="18" rx="3" fill="rgba(224,53,122,.12)" stroke="rgba(224,53,122,.35)" stroke-width="1"/><text x="711" y="1051" text-anchor="middle" font-family="'Courier New',monospace" font-size="8.5" fill="#ff4d95">⊞ REPOSITORY</text></g>
@@ -311,35 +313,35 @@
   <g class="proj-g"><rect x="24" y="1086" width="852" height="196" rx="9" fill="#1a0818" stroke="rgba(180,30,80,.25)" stroke-width="1"/>
   <rect x="24" y="1086" width="3"   height="196" rx="1.5" fill="url(#accbar)"/>
 
-  <text x="52" y="1116" font-family="'Courier New',monospace" font-size="9" fill="#e0357a" opacity=".65" letter-spacing="2">#2 · POWER BI · DAX · 2025</text>
-  <text x="52" y="1150" font-family="Georgia,serif" font-size="33" font-weight="900" fill="#f2f0f8" letter-spacing="-1" class="proj-title-txt">Corporate Sales</text>
-  <text x="52" y="1185" font-family="Georgia,serif" font-size="33" font-weight="900" fill="#f2f0f8" letter-spacing="-1" class="proj-title-txt">Dashboard</text>
-  <text x="52" y="1210" font-family="Georgia,serif" font-size="12.5" fill="#c8c2d8" font-style="italic">₹872M across 9,000 orders — KPIs, treemap, regional splits and Business insights.</text>
+  <text x="52" y="1116" font-family="'Courier New',monospace" font-size="9" opacity=".65" letter-spacing="2" fill="#e0357a">#2 · POWER BI · DAX · 2025</text>
+  <text x="52" y="1150" font-family="Georgia,serif" font-size="33" font-weight="900" letter-spacing="-1" class="proj-title-txt" fill="#f2f0f8">Corporate Sales</text>
+  <text x="52" y="1185" font-family="Georgia,serif" font-size="33" font-weight="900" letter-spacing="-1" class="proj-title-txt" fill="#f2f0f8">Dashboard</text>
+  <text x="52" y="1210" font-family="Georgia,serif" font-size="12.5" font-style="italic;fill:#c8c2d8">₹872M across 9,000 orders — KPIs, treemap, regional splits and Business insights.</text>
   <text x="52" y="1230" font-family="'Courier New',monospace" font-size="9" fill="rgba(160,154,175,.5)">Built · Power BI · DAX Measures · Power Query · 3-page report · Treemap · Regional Analysis</text>
 
-  <!-- pstats -->
-  <text x="52"  y="1262" font-family="Georgia,serif" font-size="26" font-weight="900" fill="#f2f0f8">₹872M</text>
-  <text x="52"  y="1278" font-family="'Courier New',monospace" font-size="7.5" fill="#a09aaf" letter-spacing="1">TOTAL SALES</text>
-  <text x="200" y="1262" font-family="Georgia,serif" font-size="26" font-weight="900" fill="#f2f0f8">9K</text>
-  <text x="200" y="1278" font-family="'Courier New',monospace" font-size="7.5" fill="#a09aaf" letter-spacing="1">ORDERS</text>
-  <text x="278" y="1262" font-family="Georgia,serif" font-size="26" font-weight="900" fill="#f2f0f8">10.9%</text>
-  <text x="278" y="1278" font-family="'Courier New',monospace" font-size="7.5" fill="#a09aaf" letter-spacing="1">PROFIT MARGIN</text>
-
   <!-- tags -->
-  <rect x="52"  y="1243" width="64"  height="17" rx="2" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
-  <text x="84"  y="1255" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#c8c2d8">Power BI</text>
-  <rect x="124" y="1243" width="38"  height="17" rx="2" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
-  <text x="143" y="1255" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#c8c2d8">DAX</text>
-  <rect x="170" y="1243" width="84"  height="17" rx="2" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
-  <text x="212" y="1255" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#c8c2d8">Power Query</text>
-  <rect x="262" y="1243" width="108" height="17" rx="2" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
-  <text x="316" y="1255" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#c8c2d8">Data Storytelling</text>
-  <rect x="378" y="1243" width="64"  height="17" rx="2" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
-  <text x="410" y="1255" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#c8c2d8">Treemap</text>
+  <rect x="52"  y="1218" width="64"  height="17" rx="2" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
+  <text x="84"  y="1230" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#c8c2d8">Power BI</text>
+  <rect x="124" y="1218" width="38"  height="17" rx="2" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
+  <text x="143" y="1230" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#c8c2d8">DAX</text>
+  <rect x="170" y="1218" width="84"  height="17" rx="2" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
+  <text x="212" y="1230" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#c8c2d8">Power Query</text>
+  <rect x="262" y="1218" width="108" height="17" rx="2" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
+  <text x="316" y="1230" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#c8c2d8">Data Storytelling</text>
+  <rect x="378" y="1218" width="64"  height="17" rx="2" fill="rgba(140,10,60,.08)" stroke="rgba(180,30,100,.3)" stroke-width="1"/>
+  <text x="410" y="1230" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#c8c2d8">Treemap</text>
+
+  <!-- pstats -->
+  <text x="52"  y="1256" font-family="Georgia,serif" font-size="26" font-weight="900" fill="#f2f0f8">₹872M</text>
+  <text x="52"  y="1271" font-family="'Courier New',monospace" font-size="7.5" letter-spacing="1" fill="#a09aaf">TOTAL SALES</text>
+  <text x="230" y="1256" font-family="Georgia,serif" font-size="26" font-weight="900" fill="#f2f0f8">9K</text>
+  <text x="230" y="1271" font-family="'Courier New',monospace" font-size="7.5" letter-spacing="1" fill="#a09aaf">ORDERS</text>
+  <text x="320" y="1256" font-family="Georgia,serif" font-size="26" font-weight="900" fill="#f2f0f8">10.9%</text>
+  <text x="320" y="1271" font-family="'Courier New',monospace" font-size="7.5" letter-spacing="1" fill="#a09aaf">PROFIT MARGIN</text>
 
   <!-- right: area chart -->
   <rect x="652" y="1096" width="208" height="176" rx="5" fill="rgba(0,0,0,.28)"/>
-  <text x="756" y="1116" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#a09aaf" letter-spacing="1.5">SALES TREND 2022–2025</text>
+  <text x="756" y="1116" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" letter-spacing="1.5" fill="#a09aaf">SALES TREND 2022–2025</text>
 
   <text x="660" y="1240" font-family="'Courier New',monospace" font-size="7" fill="rgba(160,154,175,.45)">2022</text>
   <text x="700" y="1240" font-family="'Courier New',monospace" font-size="7" fill="rgba(160,154,175,.45)">2023</text>
@@ -529,23 +531,23 @@
 
   <!-- row 1 -->
   <g class="exp-row"><rect x="0" y="1598" width="900" height="59" fill="transparent"/><line x1="24" y1="1598" x2="876" y2="1598" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
-  <text x="24"  y="1624" font-family="'Courier New',monospace" font-size="9.5" fill="rgba(160,154,175,.55)" letter-spacing=".3">Aug 2026 – Present</text>
-  <text x="230" y="1621" font-family="'Segoe UI',sans-serif" font-size="15" font-weight="600" fill="#f2f0f8" class="exp-role-txt">Data Analyst Training</text>
-  <text x="230" y="1641" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#a09aaf" font-style="italic">Structured training with instructor guidance · WhiteScholars Academy</text>
+  <text x="24"  y="1624" font-family="'Courier New',monospace" font-size="9.5" letter-spacing=".3" fill="rgba(160,154,175,.55)">Aug 2026 – Present</text>
+  <text x="230" y="1621" font-family="'Segoe UI',sans-serif" font-size="15" font-weight="600" class="exp-role-txt" fill="#f2f0f8">Data Analyst Training</text>
+  <text x="230" y="1641" font-family="'Segoe UI',sans-serif" font-size="11.5" font-style="italic;fill:#a09aaf">Structured training with instructor guidance · WhiteScholars Academy</text>
 
   </g>
   <!-- row 2 -->
   <g class="exp-row"><rect x="0" y="1657" width="900" height="59" fill="transparent"/><line x1="24" y1="1657" x2="876" y2="1657" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
-  <text x="24"  y="1683" font-family="'Courier New',monospace" font-size="9.5" fill="rgba(160,154,175,.55)" letter-spacing=".3">Dec 2025 – Apr 2026</text>
-  <text x="230" y="1680" font-family="'Segoe UI',sans-serif" font-size="15" font-weight="600" fill="#f2f0f8" class="exp-role-txt">Supervisor - Operations &amp; Dispatch</text>
-  <text x="230" y="1700" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#a09aaf" font-style="italic">Mahindra Logistics Limited (Zepto operations)</text>
+  <text x="24"  y="1683" font-family="'Courier New',monospace" font-size="9.5" letter-spacing=".3" fill="rgba(160,154,175,.55)">Dec 2025 – Apr 2026</text>
+  <text x="230" y="1680" font-family="'Segoe UI',sans-serif" font-size="15" font-weight="600" class="exp-role-txt" fill="#f2f0f8">Supervisor - Operations &amp; Dispatch</text>
+  <text x="230" y="1700" font-family="'Segoe UI',sans-serif" font-size="11.5" font-style="italic;fill:#a09aaf">Mahindra Logistics Limited (Zepto operations)</text>
 
   </g>
   <!-- row 3 -->
   <g class="exp-row"><rect x="0" y="1716" width="900" height="56" fill="transparent"/><line x1="24" y1="1716" x2="876" y2="1716" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
-  <text x="24"  y="1742" font-family="'Courier New',monospace" font-size="9.5" fill="rgba(160,154,175,.55)" letter-spacing=".3">Aug 2023 – Sep 2025</text>
-  <text x="230" y="1739" font-family="'Segoe UI',sans-serif" font-size="15" font-weight="600" fill="#f2f0f8" class="exp-role-txt">System Operator - WMS &amp; Logistics</text>
-  <text x="230" y="1759" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#a09aaf" font-style="italic">Ratnadeep Retail Pvt Ltd</text>
+  <text x="24"  y="1742" font-family="'Courier New',monospace" font-size="9.5" letter-spacing=".3" fill="rgba(160,154,175,.55)">Aug 2023 – Sep 2025</text>
+  <text x="230" y="1739" font-family="'Segoe UI',sans-serif" font-size="15" font-weight="600" class="exp-role-txt" fill="#f2f0f8">System Operator - WMS &amp; Logistics</text>
+  <text x="230" y="1759" font-family="'Segoe UI',sans-serif" font-size="11.5" font-style="italic;fill:#a09aaf">Ratnadeep Retail Pvt Ltd</text>
   <line x1="24" y1="1772" x2="876" y2="1772" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
   </g>
 </g>
@@ -559,14 +561,14 @@
 
   <!-- cert 1 -->
   <g class="cert-row"><rect x="0" y="1870" width="900" height="62" fill="transparent"/><line x1="24" y1="1870" x2="876" y2="1870" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
-  <text x="24"  y="1898" font-family="'Segoe UI',sans-serif" font-size="15" font-weight="600" fill="#f2f0f8" class="cert-name-txt">Excel with AI Workshop</text>
+  <text x="24"  y="1898" font-family="'Segoe UI',sans-serif" font-size="15" font-weight="600" class="cert-name-txt" fill="#f2f0f8">Excel with AI Workshop</text>
   <text x="24"  y="1918" font-family="'Courier New',monospace" font-size="9.5" fill="#a09aaf">OfficeMaster</text>
   <text x="852" y="1898" text-anchor="end" font-family="'Courier New',monospace" font-size="9.5" fill="rgba(160,154,175,.55)">November 9, 2025</text>
 
   </g>
   <!-- cert 2 -->
   <g class="cert-row"><rect x="0" y="1932" width="900" height="62" fill="transparent"/><line x1="24" y1="1932" x2="876" y2="1932" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
-  <text x="24"  y="1960" font-family="'Segoe UI',sans-serif" font-size="15" font-weight="600" fill="#f2f0f8" class="cert-name-txt">PowerBI Workshop</text>
+  <text x="24"  y="1960" font-family="'Segoe UI',sans-serif" font-size="15" font-weight="600" class="cert-name-txt" fill="#f2f0f8">PowerBI Workshop</text>
   <text x="24"  y="1980" font-family="'Courier New',monospace" font-size="9.5" fill="#a09aaf">OfficeMaster</text>
   <text x="852" y="1960" text-anchor="end" font-family="'Courier New',monospace" font-size="9.5" fill="rgba(160,154,175,.55)">September 7, 2025</text>
   <line x1="24" y1="1994" x2="876" y2="1994" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
@@ -582,16 +584,16 @@
   <text x="450" y="2116" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="13" fill="#a09aaf" font-style="italic">Data Analysis &amp; Reporting · Excel, SQL, Power BI, Python</text>
 
   <!-- footer links -->
-  <g class="hlink-btn"><rect x="90"  y="2132" width="196" height="30" rx="4" fill="#e0357a"/><text x="188" y="2152" text-anchor="middle" font-family="'Courier New',monospace" font-size="9.5" fill="#fff" letter-spacing=".5">✉ EMAIL · sai458285@gmail.com</text></g>
+  <g class="hlink-btn"><rect x="90"  y="2132" width="196" height="30" rx="4" fill="#e0357a"/><text x="188" y="2152" text-anchor="middle" font-family="'Courier New',monospace" font-size="9.5" letter-spacing=".5" fill="#fff">✉ EMAIL · sai458285@gmail.com</text></g>
 
   <g class="hlink-btn"><rect x="296" y="2132" width="196" height="30" rx="4" fill="rgba(224,53,122,.15)" stroke="rgba(224,53,122,.35)" stroke-width="1"/>
-  <text x="394" y="2152" text-anchor="middle" font-family="'Courier New',monospace" font-size="9.5" fill="#f2f0f8" letter-spacing=".5">LINKEDIN</text></g>
+  <text x="394" y="2152" text-anchor="middle" font-family="'Courier New',monospace" font-size="9.5" letter-spacing=".5" fill="#f2f0f8">LINKEDIN</text></g>
 
   <g class="hlink-btn"><rect x="502" y="2132" width="196" height="30" rx="4" fill="rgba(224,53,122,.15)" stroke="rgba(224,53,122,.35)" stroke-width="1"/>
-  <text x="600" y="2152" text-anchor="middle" font-family="'Courier New',monospace" font-size="9.5" fill="#f2f0f8" letter-spacing=".5">PORTFOLIO</text></g>
+  <text x="600" y="2152" text-anchor="middle" font-family="'Courier New',monospace" font-size="9.5" letter-spacing=".5" fill="#f2f0f8">PORTFOLIO</text></g>
 
   <!-- open to work badge -->
-  <g class="hlink-btn"><rect x="310" y="2176" width="280" height="28" rx="4" fill="rgba(224,53,122,.1)" stroke="rgba(224,53,122,.3)" stroke-width="1"/><text x="450" y="2195" text-anchor="middle" font-family="'Courier New',monospace" font-size="9.5" fill="#ff4d95" letter-spacing="1">✦  OPEN TO WORK · DATA ANALYST ROLES</text></g>
+  <g class="hlink-btn"><rect x="310" y="2176" width="280" height="28" rx="4" fill="rgba(224,53,122,.1)" stroke="rgba(224,53,122,.3)" stroke-width="1"/><text x="450" y="2195" text-anchor="middle" font-family="'Courier New',monospace" font-size="9.5" letter-spacing="1" fill="#ff4d95">✦  OPEN TO WORK · DATA ANALYST ROLES</text></g>
 
   <text x="450" y="2234" text-anchor="middle" font-family="'Courier New',monospace" font-size="8.5" fill="rgba(160,154,175,.35)" letter-spacing=".5">Built by Venkata Sai — turning data into actionable business insights.</text>
 
