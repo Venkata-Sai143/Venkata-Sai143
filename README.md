@@ -4,11 +4,13 @@
   </a>
 </p>
 
+<!--
 <p align="center">
   <a href="https://venkata-sai143.github.io/Venkata-Sai143/">
     <img src="https://img.shields.io/badge/✨_View_Live_Demo-ff2b7a?style=for-the-badge" alt="Live Demo"/>
   </a>
 </p>
+
 
 <div align="center">
 
@@ -18,3 +20,4 @@
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Venkata-Sai143)
 
 </div>
+-->
